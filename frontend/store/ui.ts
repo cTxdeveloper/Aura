@@ -1,18 +1,19 @@
 import { defineStore } from 'pinia';
+import type { AppNotification } from '~/types'; // Import the type
 
-// Define AppNotification first
-export interface AppNotification {
-  id: string;
-  type: 'success' | 'error' | 'info' | 'warning';
-  message: string;
-  duration?: number; // in ms, undefined for persistent
-}
+// The AppNotification interface is now imported from '~/types'
+// export interface AppNotification {
+//   id: string;
+//   type: 'success' | 'error' | 'info' | 'warning';
+//   message: string;
+//   duration?: number; // in ms, undefined for persistent
+// }
 
 interface UIState {
   isPageLoading: boolean;
   isModalOpen: Record<string, boolean>; // e.g., { loginModal: true, bountyFormModal: false }
   theme: 'dark' | 'light'; // If we allow theme switching beyond the default
-  notifications: AppNotification[];
+  notifications: AppNotification[]; // This will now use the imported AppNotification
 }
 
 export const useUIStore = defineStore('ui', {
