@@ -1,0 +1,6 @@
+# This file ensures the directory is tracked by Git.
+# User settings pages will go here, e.g.:
+# - profile.vue
+# - account.vue
+# - notifications.vue
+# - billing.vue

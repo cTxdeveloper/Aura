@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -11,33 +11,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'background': '#0D0D12',
-        'surface': '#16161C',
-        'primary': '#7F5AF0',
-        'primary-hover': '#9274f2',
-        'secondary': '#2CB67D',
-        'text-primary': '#F8FAFC',
-        'text-secondary': '#94A3B8',
-        'border-color': 'rgba(255, 255, 255, 0.1)',
-        'danger': '#F7685B',
+        'obsidian-black': '#101014',
+        'quantum-purple': '#7F5AF0',
+        'guardian-green': '#2CB67D',
+        'glass-bg': 'rgba(18, 18, 22, 0.5)', // For use with backdrop-filter
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'], // Example, assuming Inter is loaded
       },
-      animation: {
-        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
-        'gradient-bg': 'gradient-bg 20s ease-in-out infinite',
-      },
-      keyframes: {
-        'fade-in-up': {
-          'from': { opacity: '0', transform: 'translateY(15px)' },
-          'to': { opacity: '1', transform: 'translateY(0)' },
-        },
-        'gradient-bg': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-      }
+      // Example for custom animation/keyframes if needed directly in Tailwind
+      // keyframes: {
+      //   fadeIn: {
+      //     '0%': { opacity: '0' },
+      //     '100%': { opacity: '1' },
+      //   }
+      // },
+      // animation: {
+      //   fadeIn: 'fadeIn 1s ease-out'
+      // }
     },
   },
   plugins: [],

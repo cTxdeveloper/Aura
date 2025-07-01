@@ -1,5 +1,5 @@
-import { useAuthStore } from '~/store/auth';
 import type { UseFetchOptions } from 'nuxt/app';
+import { useAuthStore } from '~/store/auth';
 
 export const useApiFetch: typeof useFetch = (request, opts) => {
   const config = useRuntimeConfig();

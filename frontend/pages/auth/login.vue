@@ -5,9 +5,9 @@
         <h2 class="text-4xl font-bold text-white">Welcome Back</h2>
         <p class="text-text-secondary mt-2">Log in to access your Aura dashboard.</p>
       </div>
-      <form @submit.prevent="onSubmit" class="quantum-glass p-8 space-y-6">
-        <UiFormInput v-model="email" label="Email Address" id="email" type="email" :icon="Mail" :error="errors.email" placeholder="you@example.com" />
-        <UiFormInput v-model="password" label="Password" id="password" type="password" :icon="Lock" :error="errors.password" placeholder="Your password" />
+      <form class="quantum-glass p-8 space-y-6" @submit.prevent="onSubmit">
+        <UiFormInput id="email" v-model="email" label="Email Address" type="email" :icon="Mail" :error="errors.email" placeholder="you@example.com" />
+        <UiFormInput id="password" v-model="password" label="Password" type="password" :icon="Lock" :error="errors.password" placeholder="Your password" />
         
         <UiAppButton type="submit" variant="primary" class="w-full" size="large" :loading="isSubmitting">
           Log In

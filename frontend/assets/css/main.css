@@ -2,58 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-background text-text-primary font-sans;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(60deg, #0D0D12, #1a102a, #0D0D12, #10152a);
-    background-size: 300% 300%;
-    animation: gradient-bg 25s ease-in-out infinite;
-    z-index: -1;
-  }
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('~/assets/textures/noise.png');
-    background-repeat: repeat;
-    opacity: 0.03;
-    z-index: -1;
-    pointer-events: none;
-  }
+/* General body styles */
+body {
+  @apply bg-obsidian-black text-white antialiased;
+  font-family: 'Inter', sans-serif; /* Ensure Inter or your chosen font is loaded */
 }
 
-@layer components {
-  .quantum-glass {
-    background-color: rgba(22, 22, 28, 0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid theme('colors.border-color');
-    @apply rounded-2xl;
-  }
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
-  }
-  .prose-invert {
-    color: theme('colors.text-secondary');
-  }
-  .prose-invert h1, .prose-invert h2, .prose-invert h3, .prose-invert strong, .prose-invert a {
-    color: theme('colors.text-primary');
-  }
-  .prose-invert blockquote {
-    border-left-color: theme('colors.primary');
-  }
-  .prose-invert ul > li::before {
-    background-color: theme('colors.primary');
-  }
+/* Example of a global style */
+.glass-effect {
+  background-color: rgba(18, 18, 22, 0.5); /* glass-bg from tailwind config */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Optional subtle border */
+}
+
+/* Custom scrollbar (optional, for aesthetics) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #101014; /* obsidian-black */
+}
+::-webkit-scrollbar-thumb {
+  background: #7F5AF0; /* quantum-purple */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5f3db0; /* Darker purple */
 }

@@ -40,12 +40,12 @@
           <div v-if="authStore.isAuthenticated">
             <UiAppButton 
               v-if="authStore.user._id !== bounty.creator._id"
-              @click="handleClaim"
-              variant="primary" 
+              variant="primary"
               size="large" 
               class="w-full"
               :loading="isClaiming"
               :icon="Handshake"
+              @click="handleClaim"
             >
               Claim Bounty
             </UiAppButton>
