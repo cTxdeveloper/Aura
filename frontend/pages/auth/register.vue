@@ -5,19 +5,19 @@
         <h2 class="text-4xl font-bold text-white">Forge Your Aura Key</h2>
         <p class="text-text-secondary mt-2">Join a trusted network of professionals.</p>
       </div>
-      <form @submit.prevent="onSubmit" class="quantum-glass p-8 space-y-6">
-        <UiFormInput v-model="fullName" label="Full Name" id="full_name" :icon="User" :error="errors.full_name" placeholder="John Doe" />
-        <UiFormInput v-model="email" label="Email Address" id="email" type="email" :icon="Mail" :error="errors.email" placeholder="you@example.com" />
-        <UiFormInput v-model="password" label="Password" id="password" type="password" :icon="Lock" :error="errors.password" placeholder="8+ characters" />
+      <form class="quantum-glass p-8 space-y-6" @submit.prevent="onSubmit">
+        <UiFormInput id="full_name" v-model="fullName" label="Full Name" :icon="User" :error="errors.full_name" placeholder="John Doe" />
+        <UiFormInput id="email" v-model="email" label="Email Address" type="email" :icon="Mail" :error="errors.email" placeholder="you@example.com" />
+        <UiFormInput id="password" v-model="password" label="Password" type="password" :icon="Lock" :error="errors.password" placeholder="8+ characters" />
         
         <div>
            <label class="block text-sm font-medium text-text-secondary mb-2">I am a...</label>
            <div class="grid grid-cols-2 gap-2">
-              <button type="button" @click="role = 'seeker'" :class="['p-4 border rounded-lg text-center transition-colors', role === 'seeker' ? 'bg-primary/20 border-primary' : 'border-border-color hover:border-primary/50']">
+              <button type="button" :class="['p-4 border rounded-lg text-center transition-colors', role === 'seeker' ? 'bg-primary/20 border-primary' : 'border-border-color hover:border-primary/50']" @click="role = 'seeker'">
                 <span class="font-semibold">Seeker</span>
                 <p class="text-xs text-text-secondary">I need connections</p>
               </button>
-              <button type="button" @click="role = 'connector'" :class="['p-4 border rounded-lg text-center transition-colors', role === 'connector' ? 'bg-primary/20 border-primary' : 'border-border-color hover:border-primary/50']">
+              <button type="button" :class="['p-4 border rounded-lg text-center transition-colors', role === 'connector' ? 'bg-primary/20 border-primary' : 'border-border-color hover:border-primary/50']" @click="role = 'connector'">
                 <span class="font-semibold">Connector</span>
                 <p class="text-xs text-text-secondary">I have connections</p>
               </button>

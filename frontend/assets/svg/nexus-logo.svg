@@ -1,0 +1,12 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Placeholder for the Nexus Logo -->
+  <!-- A simple geometric shape for now, representing a crystal facet -->
+  <defs>
+    <linearGradient id="nexusGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7F5AF0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <polygon points="50,5 95,35 80,95 20,95 5,35" fill="url(#nexusGradient)" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="50" y="60" font-family="sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">NEXUS</text>
+</svg>

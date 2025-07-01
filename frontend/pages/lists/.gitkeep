@@ -1,0 +1,4 @@
+# This file ensures the directory is tracked by Git.
+# Pages related to "Connection Lists" or other list marketplaces, e.g.:
+# - index.vue (Main list marketplace)
+# - [id].vue (Specific list details)

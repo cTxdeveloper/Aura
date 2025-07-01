@@ -50,8 +50,8 @@
 </template>
 
 <script setup>
-import { useAuthStore } from '~/store/auth';
 import { DollarSign, MessageSquare, Handshake, CheckCircle, XCircle } from 'lucide-vue-next';
+import { useAuthStore } from '~/store/auth';
 
 const route = useRoute();
 const authStore = useAuthStore();

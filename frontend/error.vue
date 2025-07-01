@@ -8,7 +8,7 @@
     </div>
     <h1 class="text-6xl font-extrabold text-white">{{ error.statusCode }}</h1>
     <p class="text-2xl text-text-secondary mt-4 mb-8">{{ errorMessage }}</p>
-    <UiAppButton @click="handleError" variant="primary" size="large">
+    <UiAppButton variant="primary" size="large" @click="handleError">
       Return to Safety
     </UiAppButton>
   </div>
@@ -16,7 +16,12 @@
 
 <script setup>
 import { Compass } from 'lucide-vue-next';
-const props = defineProps({ error: Object });
+const props = defineProps({
+  error: {
+    type: Object,
+    default: () => ({ statusCode: 500, message: 'An unexpected error occurred.' }) // Provide a default error object
+  }
+});
 
 const errorMessage = computed(() => {
     if (props.error.statusCode === 404) {
